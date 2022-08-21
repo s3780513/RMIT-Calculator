@@ -1,11 +1,12 @@
 package edu.au.rmit.ct;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class MyCalculatorTest {
 
@@ -28,30 +29,23 @@ class MyCalculatorTest {
 	void test() { //Generic test fail
 		fail("Not yet implemented");
 	}
-	
-	// Some Suggested tests below
-	
-	/*
-	 *  @Test
-	 *  void testAdditionOfIntegersSimple() {}
-	 */
+	@Test
+	void testAdditionOfIntegersSimple() {
+		MyCalculator mc = new MyCalculator(100, "ee");
+		assertEquals(0, mc.addIntegers(2,0));
+	}
+	@Test
+	void testDivideTwoIntegers() {
+		MyCalculator mc = new MyCalculator(100, "ee");
+		assertEquals(0, mc.divideIntegers(2,0));
+	}
+	@Test
+	void testModulusTwoIntegers() {
+		MyCalculator mc = new MyCalculator(100, "ee");
+		assertEquals(0, mc.modulusIntegers(2,0));
+	}
+	@Test
+	void testExpectedExceptionWhenDivideByZero() {
 
-	/*
-	 *  @Test
-	 *  void testDivideTwoIntegers() {}
-	 */
-
-	/*
-	 *  @Test
-	 *  void testModulusTwoIntegers() {}
-	 */
-	
-	/*
-	 *  @Test
-	 *  void testExpectedExceptionWhenDivideByZero() {}
-	 */
-	
- 
-	
-
+	}
 }

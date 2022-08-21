@@ -26,5 +26,8 @@ public class MyCalculator
 		// TODO Auto-generated method stub
 		return  i / j;
 	}
+	public int modulusIntegers(int i, int j) {
+		return i % j;
+	}
 	
 }
